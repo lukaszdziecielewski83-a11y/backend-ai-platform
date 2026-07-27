@@ -1,5 +1,8 @@
 from fastapi import FastAPI
 
+from app.api.routes import router
+
+
 app = FastAPI(
     title="Backend AI Platform",
     description="Production-oriented backend platform",
@@ -7,8 +10,4 @@ app = FastAPI(
 )
 
 
-@app.get("/")
-def root():
-    return {
-        "message": "Backend AI Platform is running"
-    }
+app.include_router(router)
