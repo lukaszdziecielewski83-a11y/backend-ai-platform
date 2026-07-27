@@ -1,5 +1,14 @@
-"""
-Application entry point.
+from fastapi import FastAPI
 
-This module will initialize the FastAPI application.
-"""
+app = FastAPI(
+    title="Backend AI Platform",
+    description="Production-oriented backend platform",
+    version="1.0.0"
+)
+
+
+@app.get("/")
+def root():
+    return {
+        "message": "Backend AI Platform is running"
+    }
