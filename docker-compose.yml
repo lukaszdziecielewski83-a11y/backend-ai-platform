@@ -1,0 +1,8 @@
+version: "3.8"
+
+services:
+  backend:
+    container_name: backend-ai-platform
+
+  database:
+    container_name: backend-ai-postgres
